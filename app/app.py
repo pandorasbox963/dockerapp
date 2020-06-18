@@ -2,9 +2,9 @@ from flask import Flask, request, render_template
 import redis
 
 app = Flask(__name__)
-default_key = '9'
+default_key = '8'
 cache = redis.StrictRedis(host='redis', port=6379, db=0)
-cache.set(default_key, "nine")
+cache.set(default_key, "eight")
 
 @app.route('/', methods=['GET', 'POST'])
 def mainpage():
